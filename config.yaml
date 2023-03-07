@@ -1,0 +1,28 @@
+DATABASE: C:\Users\Paul\Desktop\ALLdevs\PYTHON\SKLAD\sklad.accdb
+#DATABASE: \\NAS\Zalohy\Sklad\sklad.accdb
+OUTPUT_DIR : C:\Users\Paul\Desktop\ALLdevs\PYTHON\SKLAD\output_tex
+
+#DATABASE: C:\Users\Filip\Desktop\ALLdevs\PYTHON\SKLAD\sklad.accdb
+#OUTPUT_DIR : C:\Users\Filip\Desktop\ALLdevs\PYTHON\SKLAD\output_tex
+
+QUERY_FOR_PRINT_QR: "SELECT QRCODE, NAZEV, POPIS FROM sklad ORDER BY ID ASC" #Musí obsahovat SELECT QRCODE, NAZEV, POPIS FROM sklad
+#dále jde například přidat SELECT QRCODE, NAZEV, POPIS FROM sklad WHERE ID > 5 -> Pro tisk QR kodů s ID větším jak 5
+QUERY_FOR_PRINT_LOT: "SELECT Zakazka,POPIS FROM Zakazky"
+
+PORT : "\\\\.\\COM10"
+
+LOT:
+  PREFIX : "LO_"
+  SUFFIX : "\n\r"
+
+PRODUCT_ID:
+  PREFIX : "QR_"
+  SUFFIX : "\n\r"
+
+POCET:
+  PREFIX : "COUNT_"
+  SUFFIX : "\n\r"
+
+POTVRZOVANI:
+  OKEY : "1"
+  CANCEL : "CANCEL"
