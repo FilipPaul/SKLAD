@@ -39,7 +39,7 @@ class LOGGER:
             level, message = self.colorLevels(level,message)
             line_string = f"\033[36m{line_string}\033[0m" #style it yellow
             #print(f'{level:<14} :: {message:<80} :: {datetime.now()} :: {line_string}')
-            print(f'{level:<14} :: {message:<80} :: {line_string}')
+            print(f'{level:<14} :: {message}')
             #print(f'{prefix_to_show}: {message:<80}')
         
     def colorLevels(self,level,message):

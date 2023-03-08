@@ -1,1 +1,2 @@
-createTableFromReques
+
+        self.setMaximumWidth(40)
