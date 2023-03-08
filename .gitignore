@@ -3,4 +3,4 @@
 __pycache__/
 build/
 dist/
-download_images/
+downloaded_images/
