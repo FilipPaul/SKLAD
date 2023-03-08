@@ -1,6 +1,6 @@
-DATABASE: C:\Users\Paul\Desktop\ALLdevs\PYTHON\SKLAD\sklad.accdb
+DATABASE: C:\PROJECTS\SKLAD\sklad.accdb
 #DATABASE: \\NAS\Zalohy\Sklad\sklad.accdb
-OUTPUT_DIR : C:\Users\Paul\Desktop\ALLdevs\PYTHON\SKLAD\output_tex
+OUTPUT_DIR : C:\PROJECTS\SKLAD\output_tex
 
 #DATABASE: C:\Users\Filip\Desktop\ALLdevs\PYTHON\SKLAD\sklad.accdb
 #OUTPUT_DIR : C:\Users\Filip\Desktop\ALLdevs\PYTHON\SKLAD\output_tex

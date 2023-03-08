@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>781</width>
+    <height>873</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Tab 1</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string>Vybrat seznam čísel</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pb_search_from_file">
+           <property name="text">
+            <string>Vybrat</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>Part Number:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="le_part_number"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pb_search_single">
+           <property name="text">
+            <string>Vyhledat</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="che_add_overwrite">
+           <property name="text">
+            <string>Přidat/Přepsat</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Hledat na:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="che_mouser">
+           <property name="text">
+            <string>MOUSER</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="che_farnell">
+           <property name="text">
+            <string>FARNELL</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="table_results">
+         <property name="font">
+          <font>
+           <pointsize>7</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QHeaderView::section
+{
+background-color:rgb(30, 30, 30);
+color: rgb(104, 205, 254);
+border: 1px solid;
+border-color: rgb(107, 133, 133)
+}
+
+
+QTableView::item:alternate { background-color: #bfffbf; }</string>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>false</bool>
+         </property>
+         <property name="sortingEnabled">
+          <bool>false</bool>
+         </property>
+         <property name="rowCount">
+          <number>0</number>
+         </property>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>4</number>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>70</number>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="verticalHeaderMinimumSectionSize">
+          <number>5</number>
+         </attribute>
+         <attribute name="verticalHeaderDefaultSectionSize">
+          <number>20</number>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>Vybrat</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Dodavatel</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Dodavatel partNumber</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Výrobce</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Výrobce partNumber</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Popis CZ</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Popis EN</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Na skladě dodavatel</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Na skladě ČEVOR</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Factory Lead time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Cena</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Ceník</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Datasheet</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Link</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QPushButton" name="pb_load_to_database">
+           <property name="text">
+            <string>Nahrát do databáze</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Tab 2</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

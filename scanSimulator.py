@@ -1,14 +1,14 @@
 import os
 import traceback
 import yaml
-from PyQt5 import QtWidgets,QtCore
+from PyQt6 import QtWidgets,QtCore
 import datetime
 from unidecode import unidecode
 #Automaticaly update files from QT designer
-if os.path.exists("scanSimulatorUi.py"):
-    os.remove("scanSimulatorUi.py")
-bashCommand = "pyuic5 -o scanSimulatorUi.py scanSimulatorUi.ui"
-os.system(bashCommand)
+#if os.path.exists("scanSimulatorUi.py"):
+#    os.remove("scanSimulatorUi.py")
+#bashCommand = "pyuic5 -o scanSimulatorUi.py scanSimulatorUi.ui"
+#os.system(bashCommand)
 
 
 from AutomateSuperPackage.AutomateSuperModule import SuperClass
@@ -16,7 +16,7 @@ from LOT_GENERATOR import LoTGenerator
 from QR_code_generator import QRcodeGenerator
 
 #PyQT IMPORTS
-from scanSimulatorUi import Ui_Form as designer_UI
+from scanSimulatorGUI import Ui_Form as designer_UI
 
 class MainWindowApp(QtWidgets.QWidget):
     class STATES():
@@ -396,6 +396,4 @@ if __name__ == '__main__':
         # return self.currentText()
     #MainWindow.showMaximized()
     #self.showFullScreen()
-    app.exec_()
-
-
+    app.exec()

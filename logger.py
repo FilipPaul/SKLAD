@@ -33,13 +33,14 @@ class LOGGER:
                 message = message.replace("\r","\\r").replace("\n","\\n")
 
 
-            prefix_to_show = message.split(":")[0]#delete this
-            prefix_to_show = f"\033[34m{prefix_to_show}\033[0m"
-            message = ":".join(message.split(":")[1:])#delete this
+            #prefix_to_show = message.split(":")[0]#delete this
+            #prefix_to_show = f"\033[34m{prefix_to_show}\033[0m"
+            #message = ":".join(message.split(":")[1:])#delete this
             level, message = self.colorLevels(level,message)
             line_string = f"\033[36m{line_string}\033[0m" #style it yellow
             #print(f'{level:<14} :: {message:<80} :: {datetime.now()} :: {line_string}')
-            print(f'{prefix_to_show}: {message:<80}')
+            print(f'{level:<14} :: {message:<80} :: {line_string}')
+            #print(f'{prefix_to_show}: {message:<80}')
         
     def colorLevels(self,level,message):
         if level == "CRITICAL":
